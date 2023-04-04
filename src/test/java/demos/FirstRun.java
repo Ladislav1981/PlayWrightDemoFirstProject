@@ -14,7 +14,7 @@ public class FirstRun {
         Browser browser= playwright.chromium().launch(// можно менять поисковики//
                 new BrowserType.LaunchOptions()
                         .setHeadless(false)// без показания графики изначально True//
-                        .setChannel("chromium")
+                        .setChannel("chrome")
         );
 
         Page page = browser.newPage();
@@ -28,6 +28,10 @@ public class FirstRun {
         System.out.println("title = " + title);
 
         System.out.println("url = " + url);
+
+
+
+
 
         page.waitForTimeout(3000); // мили секунды//
 
